@@ -1,5 +1,5 @@
 # factorised-image-generation
-A collection of GANs demonstrating the efficiency of factorised transposed convolution (deconvolution) layers - performance is comparable to conventional model architectures, but with ~25-35% less parameters.
+A collection of GANs demonstrating the efficiency of factorised transposed convolution (deconvolution) layers - performance is comparable to conventional model architectures, but with ~15-35% less parameters.
 
 
 ## Context
