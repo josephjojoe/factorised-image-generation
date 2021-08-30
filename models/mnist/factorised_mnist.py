@@ -50,3 +50,20 @@ def make_generator_model():
     model.add(layers.Conv2DTranspose(1, (1, 5), strides=(1, 1), padding='same', use_bias=False, activation='tanh'))
 
     return model
+
+# Discriminator model (left unfactorised).
+def make_discriminator_model():
+    model = tf.keras.Sequential()
+    model.add(layers.Conv2D(64, (5, 5), strides=(2, 2), padding='same',
+                                     input_shape=[28, 28, 1]))
+    model.add(layers.LeakyReLU())
+    model.add(layers.Dropout(0.3))
+    
+    model.add(layers.Conv2D(128, (5, 5), strides=(2, 2), padding='same'))
+    model.add(layers.LeakyReLU())
+    model.add(layers.Dropout(0.3))
+
+    model.add(layers.Flatten())
+    model.add(layers.Dense(1))
+
+    return model
