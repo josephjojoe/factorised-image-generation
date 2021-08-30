@@ -12,7 +12,7 @@ In this repository, this concept of factorising convolutional layers is applied 
 
 Factorised model             |  Naive model
 :-------------------------:|:-------------------------:
-<img src="examples/cifar-10/factorised_generated_frog9800.png" width="250" height="250"/> <img src="examples/cifar-10/factorised_generated_frog9900.png" width="250" height="250"/>  |  <img src="examples/cifar-10/factorised_generated_frog9900.png" width="250" height="250"/>
+<img src="examples/cifar-10/factorised_generated_frog9800.png" width="150" height="150"/> <img src="examples/cifar-10/factorised_generated_frog9900.png" width="150" height="150"/> | <img src="examples/cifar-10/naive_generated_frog9800.png" width="150" height="150"/> <img src="examples/cifar-10/naive_generated_frog9900.png" width="150" height="150"/>
 
 ### MNIST
 Factorised model             |  Naive model
