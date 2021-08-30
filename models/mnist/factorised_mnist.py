@@ -22,3 +22,31 @@ BATCH_SIZE = 256
 
 # Batches and shuffles the data.
 train_dataset = tf.data.Dataset.from_tensor_slices(train_images).shuffle(BUFFER_SIZE).batch(BATCH_SIZE)
+
+# Factorised generator model.
+def make_generator_model():
+    model = tf.keras.Sequential()
+    model.add(layers.Dense(7*7*256, use_bias=False, input_shape=(100,)))
+    model.add(layers.BatchNormalization())
+    model.add(layers.LeakyReLU())
+
+    model.add(layers.Reshape((7, 7, 256)))
+
+    model.add(layers.Conv2DTranspose(128, (3, 1), strides=(1, 1), padding='same', use_bias=False))
+    model.add(layers.Conv2DTranspose(128, (1, 3), strides=(1, 1), padding='same', use_bias=False))
+    model.add(layers.BatchNormalization())
+    model.add(layers.Conv2DTranspose(128, (3, 1), strides=(1, 1), padding='same', use_bias=False))
+    model.add(layers.Conv2DTranspose(128, (1, 3), strides=(1, 1), padding='same', use_bias=False))
+    model.add(layers.BatchNormalization())
+    model.add(layers.LeakyReLU())
+
+    model.add(layers.Conv2DTranspose(64, (3, 1), strides=(2, 2), padding='same', use_bias=False))
+    model.add(layers.Conv2DTranspose(64, (1, 3), strides=(2, 2), padding='same', use_bias=False))
+    
+    model.add(layers.BatchNormalization())
+    model.add(layers.LeakyReLU())
+
+    model.add(layers.Conv2DTranspose(1, (5, 1), strides=(1, 1), padding='same', use_bias=False, activation='tanh'))
+    model.add(layers.Conv2DTranspose(1, (1, 5), strides=(1, 1), padding='same', use_bias=False, activation='tanh'))
+
+    return model
