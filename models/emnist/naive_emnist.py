@@ -34,7 +34,7 @@ train_dataset = tf.data.Dataset.from_tensor_slices(train_images).shuffle(BUFFER_
 
 def make_generator_model():
     model = tf.keras.Sequential()
-    model.add(layers.Dense(7*7*256, use_bias=False, input_shape=(100,)))
+    model.add(layers.Dense(7*7*256, use_bias=False, input_shape=(256,)))
     model.add(layers.BatchNormalization())
     model.add(layers.LeakyReLU())
 
@@ -97,7 +97,7 @@ checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,
                                  discriminator=discriminator)
 
 EPOCHS = 100
-noise_dim = 100
+noise_dim = 256
 num_examples_to_generate = 16
 seed = tf.random.normal([num_examples_to_generate, noise_dim])
 
