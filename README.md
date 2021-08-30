@@ -27,5 +27,5 @@ The [CIFAR-10 model code](https://colab.research.google.com/github/fchollet/deep
 
 ## Datasets
 The datasets used in this repository are:
-- MNIST database of handwritten images
+- MNIST database of handwritten digits
 - CIFAR-10
