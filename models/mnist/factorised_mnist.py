@@ -67,3 +67,37 @@ def make_discriminator_model():
     model.add(layers.Dense(1))
 
     return model
+
+# Loss functions and optimisers for the generator and discriminator.
+cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
+
+def discriminator_loss(real_output, fake_output):
+    real_loss = cross_entropy(tf.ones_like(real_output), real_output)
+    fake_loss = cross_entropy(tf.zeros_like(fake_output), fake_output)
+    total_loss = real_loss + fake_loss
+    return total_loss
+
+def generator_loss(fake_output):
+    return cross_entropy(tf.ones_like(fake_output), fake_output)
+
+generator_optimizer = tf.keras.optimizers.Adam(1e-4)
+discriminator_optimizer = tf.keras.optimizers.Adam(1e-4)
+
+# Model creation
+generator = make_generator_model()
+discriminator = make_discriminator_model()
+
+# Checkpointing
+checkpoint_dir = './training_checkpoints'
+checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
+checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,
+                                 discriminator_optimizer=discriminator_optimizer,
+                                 generator=generator,
+                                 discriminator=discriminator)
+
+EPOCHS = 100
+noise_dim = 100
+num_examples_to_generate = 16
+
+# Seed for progress visualisation
+seed = tf.random.normal([num_examples_to_generate, noise_dim])
