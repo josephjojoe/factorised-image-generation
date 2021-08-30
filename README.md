@@ -14,6 +14,11 @@ Factorised model             |  Naive model
 :-------------------------:|:-------------------------:
 <img src="examples/cifar-10/factorised_generated_frog9800.png" width="250" height="250"/> <img src="examples/cifar-10/factorised_generated_frog9900.png" width="250" height="250"/>  |  <img src="examples/cifar-10/factorised_generated_frog9900.png" width="250" height="250"/>
 
+### MNIST
+Factorised model             |  Naive model
+:-------------------------:|:-------------------------:
+(To be added) | <img src="examples/mnist/naive_mnist_numbers.gif" width="250" height="250"/>
+
 
 ## Code
 The [MNIST model code](https://www.tensorflow.org/tutorials/generative/dcgan) is from the TensorFlow Deep Convolutional Generative Adversarial Network guide.
