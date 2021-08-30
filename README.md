@@ -28,7 +28,7 @@ Factorised model             |  Naive model
 
 Dataset                    |  Naive generator model parameters | Factorised generator model parameters | Parameter reduction
 :-------------------------:|:---------------------------------:|:-------------------------------------:|:-------------------------:
-MNIST                      | 
+MNIST                      | 2,330,944                         | 1,558,293                             | 772,651 (31.15%)
 CIFAR-10                   | 6,264,579                         | 3,971,587                             | 2,292,992 (36.60%)
 
 
