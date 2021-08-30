@@ -30,8 +30,7 @@ Dataset                    |  Naive generator model parameters | Factorised gene
 :-------------------------:|:---------------------------------:|:-------------------------------------:|:-------------------------:
 MNIST                      | 2,330,944                         | 1,558,293                             | 772,651 (31.15%)
 CIFAR-10                   | 6,264,579                         | 3,971,587                             | 2,292,992 (36.60%)
-EMNIST                     | 4,287,808                         |                                       |
-
+EMNIST Letters             | 4,287,808                         |                                       |
 
 
 ## Code
@@ -39,8 +38,11 @@ The [MNIST model code](https://www.tensorflow.org/tutorials/generative/dcgan) is
 
 The [CIFAR-10 model code](https://colab.research.google.com/github/fchollet/deep-learning-with-python-notebooks/blob/master/chapter12_part05_gans.ipynb) is from Deep Learning with Python, by Francois Chollet.
 
+Other model code has also generally been based upon the above resources with some modifications for data loading and pre-processing.
+
 
 ## Datasets
 The datasets used in this repository are:
 - MNIST database of handwritten digits
 - CIFAR-10
+- EMNIST Letters
