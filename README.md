@@ -29,7 +29,7 @@ Factorised model             |  Naive model
 <img src="examples/emnist/factorised_emnist_letters.gif" width="250" height="250"/> | <img src="examples/emnist/naive_emnist_letters.gif" width="250" height="250"/>
 
 
-## Improved Efficiency
+## Improved Parameter Efficiency
 The table below lists the reduction in trainable parameters gained by factorising transposed convolution layers in the generator component of the GAN for each dataset. Please note that the parameter numbers shown here refer to **all** parameters, trainable and non-trainable, and that they only include the generator of each GAN and not the discriminator - I have not factored the convolutional discriminator layers, hence the parameters in both the naive and factorised implementations would be the same.
 
 Dataset                    |  Naive generator model parameters | Factorised generator model parameters | Parameter reduction
