@@ -55,6 +55,9 @@ The datasets used in this repository are:
 - CIFAR-10
 - EMNIST Letters
 
+## Further Steps
+I plan to use the bilinear additive upsampling method described by Wojna et al. [4] and the idea of layer branching from the Inception module architecture to produce a novel GAN architecture, entitled InceptionGAN.
+
 ## Citations 
 
 ```
@@ -64,4 +67,6 @@ The datasets used in this repository are:
 
 [3] Radford, A., Metz, L. & Chintala, S., 2016. Unsupervised Representation Learning 
 with Deep Convolutional Generative Adversarial Networks. arXiv.
+
+[4] Wojna, Z. et al., 2019. The Devil is in the Decoder: Classification, Regression and GANs. arXiv.
 ```
