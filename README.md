@@ -3,9 +3,11 @@ A collection of GANs demonstrating the efficiency of factorised transposed convo
 
 
 ## Context
-The Inception architecture and variants such as Xception have been used in image classification tasks with great success - successive versions Inception v2 and v3 have improved on the naive implementation by factorising larger convolutions such as 5x5 to two 3x3 convolution operations as well as by factorising operations of the form NxN to two operations 1xN and Nx1, reducing the amount of needed parameters whilst maintaining a similarly high ability to recognise patterns in input images.
+The Inception architecture [1] and variants such as Xception [2] have been used in image classification tasks with great success - successive versions Inception v2 and v3 have improved on the naive implementation by factorising larger convolutions such as 5x5 to two 3x3 convolution operations as well as by factorising operations of the form NxN to two operations 1xN and Nx1, reducing the amount of needed parameters whilst maintaining a similarly high ability to recognise patterns in input images.
 
 In this repository, this concept of factorising convolutional layers is applied in reverse to transposed convolution layers; an identical copy of the model without factorised layers is also present within each folder for easy comparison of the two. The factorised models contain around 15-40% less parameters, but perform approximately as well (subjectively) as their naive counterparts.
+
+**Note:** Visible flickering is present in the GIFs for EMNIST Letters and MNIST, indicating a certain amount of model instability. This can be rectified by reducing the the momentum term β1 from 0.9 to 0.5 as per the work of Radford et al. [3], but I have opted not to include this to make comparing the two architecture choices as easy as possible.
 
 
 ## Examples
@@ -52,3 +54,14 @@ The datasets used in this repository are:
 - MNIST database of handwritten digits
 - CIFAR-10
 - EMNIST Letters
+
+## Citations 
+
+```
+[1] Szegedy, C. et al., 2014. Going deeper with convolutions. arXiv.
+
+[2] Chollet, F., 2017. Xception: Deep Learning with Depthwise Separable Convolutions. arXiv.
+
+[3] Radford, A., Metz, L. & Chintala, S., 2016. Unsupervised Representation Learning 
+with Deep Convolutional Generative Adversarial Networks. arXiv.
+```
