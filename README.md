@@ -7,7 +7,7 @@ The Inception architecture [1] and variants such as Xception [2] have been used 
 
 In this repository, this concept of factorising convolutional layers is applied in reverse to transposed convolution layers; an identical copy of the model without factorised layers is also present within each folder for easy comparison of the two. The factorised models contain around 15-40% less parameters, but perform approximately as well (subjectively) as their naive counterparts.
 
-**Note:** Visible flickering is present in the GIFs for EMNIST Letters and MNIST, indicating a certain amount of model instability. This can be rectified by reducing the the momentum term β1 from 0.9 to 0.5 as per the work of Radford et al. [3], but I have opted to not include this measure in order to make comparing the two architecture choices as easy as possible.
+**Note:** Visible flickering is present in the GIFs for the MNIST and EMNIST Letters datasets, indicating a certain amount of model instability. This can be rectified by reducing the the momentum term β1 from 0.9 to 0.5 as per the work of Radford et al. [3], but I have opted to not include this measure in order to make comparing the two architecture choices as easy as possible.
 
 
 ## Examples
