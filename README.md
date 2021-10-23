@@ -7,8 +7,6 @@ The Inception architecture [1] and variants such as Xception [2] have been used 
 
 In this repository, this concept of factorising convolutional layers is applied in reverse to transposed convolution layers; an identical copy of the model without factorised layers is also present within each folder for easy comparison of the two. The factorised models contain around 15-40% less parameters, but perform approximately as well (subjectively) as their naive counterparts.
 
-Visible flickering was initially present in the GIFs for the MNIST and EMNIST Letters datasets, indicating a certain amount of model instability - this was rectified by reducing the the momentum term β1 from 0.9 to 0.5 as per the work of Radford et al. [3]
-
 
 ## Examples
 
@@ -47,6 +45,8 @@ The [MNIST model code](https://www.tensorflow.org/tutorials/generative/dcgan) is
 The [CIFAR-10 model code](https://colab.research.google.com/github/fchollet/deep-learning-with-python-notebooks/blob/master/chapter12_part05_gans.ipynb) is from Deep Learning with Python, by Francois Chollet.
 
 Other model code has also generally been based upon the above resources with some modifications for data loading and pre-processing.
+
+Visible flickering was initially present in the GIFs for the MNIST and EMNIST Letters datasets, indicating a certain amount of model instability - this was rectified by reducing the the momentum term β1 from 0.9 to 0.5 as per the work of Radford et al. [3] and increasing the learning rate to 0.0002 to compensate.
 
 
 ## Datasets
