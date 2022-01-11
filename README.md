@@ -56,7 +56,7 @@ The datasets used in this repository are:
 - EMNIST Letters
 
 ## Further Steps / Contributing
-I plan to use the bilinear additive upsampling method described by Wojna et al. [4] and the idea of layer branching from the Inception module architecture to produce a novel GAN architecture, entitled InceptionGAN.
+The bilinear additive upsampling method described by Wojna et al. [4] and the idea of layer branching from the Inception module architecture could be used to produce a novel GAN architecture, tentatively named InceptionGAN.
 
 Contributing to this repository would preferably consist of testing 'factorised' models and their naive equivalents on other datasets, preferably using more objective metrics such as the Inception Score (IS) in order to make a more accurate comparison.
 
